@@ -2,9 +2,10 @@
 
 namespace muyomu\http;
 
+use muyomu\http\client\RequestClient;
 use muyomu\http\exception\HeaderNotFound;
 
-class Request
+class Request implements RequestClient
 {
     /*
      * 固定信息
