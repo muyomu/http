@@ -3,6 +3,7 @@
 namespace muyomu\http;
 
 use muyomu\http\client\ResponseClient;
+use muyomu\http\message\Message;
 
 class Response implements ResponseClient
 {
@@ -24,8 +25,63 @@ class Response implements ResponseClient
         header($header);
     }
 
-    public function DoResponse(): void
+    public function doResponse(mixed $data): void
     {
-        // TODO: Implement DoResponse() method.
+        switch (gettype($data)){
+            case "integer":
+            case "boolean":
+            case "double":
+            case "string": $this->returnRaw($data);break;
+            case "NULL": $this->returnWhite();break;
+            case "array": $this->returnJson();break;
+        }
+
+    }
+
+    public function returnWhite(): void
+    {
+        $message = new Message();
+        $message->setDataCode(200);
+        $message->setDataType("empty");
+        $message->setDataStatus("Success");
+        $message->setData(null);
+
+        $return = array();
+        $return['code'] = $message->getDataCode();
+        $return['status'] = $message->getDataStatus();
+        $return['dateType'] = $message->getDataType();
+
+        echo json_encode($return, JSON_UNESCAPED_UNICODE);
+    }
+
+    public function returnRaw(mixed $data): void
+    {
+        $this->extracted($data);
+    }
+
+    public function returnJson(array $data): void
+    {
+        $this->extracted($data);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function extracted(array $data): void
+    {
+        $message = new Message();
+        $message->setDataCode(200);
+        $message->setDataType(gettype($data));
+        $message->setDataStatus("Success");
+        $message->setData($data);
+
+        $return = array();
+        $return['code'] = $message->getDataCode();
+        $return['status'] = $message->getDataStatus();
+        $return['dateType'] = $message->getDataType();
+        $return['data'] = $message->getData();
+
+        echo json_encode($return, JSON_UNESCAPED_UNICODE);
     }
 }
