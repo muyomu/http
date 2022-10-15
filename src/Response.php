@@ -33,7 +33,7 @@ class Response implements ResponseClient
             case "double":
             case "string": $this->returnRaw($data);break;
             case "NULL": $this->returnWhite();break;
-            case "array": $this->returnJson();break;
+            case "array": $this->returnJson($data);break;
         }
 
     }
@@ -56,19 +56,22 @@ class Response implements ResponseClient
 
     public function returnRaw(mixed $data): void
     {
-        $this->extracted($data);
+        $message = new Message();
+        $message->setDataCode(200);
+        $message->setDataType(gettype($data));
+        $message->setDataStatus("Success");
+        $message->setData($data);
+
+        $return = array();
+        $return['code'] = $message->getDataCode();
+        $return['status'] = $message->getDataStatus();
+        $return['dateType'] = $message->getDataType();
+        $return['data'] = $message->getData();
+
+        echo json_encode($return, JSON_UNESCAPED_UNICODE);
     }
 
     public function returnJson(array $data): void
-    {
-        $this->extracted($data);
-    }
-
-    /**
-     * @param array $data
-     * @return void
-     */
-    public function extracted(array $data): void
     {
         $message = new Message();
         $message->setDataCode(200);
