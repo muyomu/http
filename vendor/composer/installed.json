@@ -1,0 +1,46 @@
+{
+    "packages": [
+        {
+            "name": "muyomu/database",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/muyomu/database.git",
+                "reference": "7e4e7b94f8668d53400e3873add5ee4afe554c15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/muyomu/database/zipball/7e4e7b94f8668d53400e3873add5ee4afe554c15",
+                "reference": "7e4e7b94f8668d53400e3873add5ee4afe554c15",
+                "shasum": ""
+            },
+            "time": "2022-10-15T11:56:40+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "muyomu\\database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "mutian",
+                    "email": "bhfqlz@qq.com"
+                }
+            ],
+            "description": "The database of muyomu web framework",
+            "support": {
+                "issues": "https://github.com/muyomu/database/issues",
+                "source": "https://github.com/muyomu/database/tree/v1.0.3"
+            },
+            "install-path": "../muyomu/database"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
