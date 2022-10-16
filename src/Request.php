@@ -60,6 +60,6 @@ class Request implements RequestClient
     public function getURL(): string
     {
         $data = explode("?",$_SERVER['REQUEST_URI']);
-        return array_pop($data);
+        return reset($data);
     }
 }
