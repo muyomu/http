@@ -9,6 +9,7 @@ use muyomu\http\exception\HeaderNotFound;
 class Request implements RequestClient
 {
     private DbClient $dbClient;
+
     /*
      * 固定信息
      */
@@ -31,6 +32,10 @@ class Request implements RequestClient
 
     public function getRemotePort():int{
         return $_SERVER['REMOTE_PORT'];
+    }
+
+    public function getDataBase():DbClient{
+        return $this->dbClient;
     }
 
     /*

@@ -3,7 +3,7 @@
         'name' => 'muyomu/http',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5878e110005cf4da417700bb2feac0d86395719e',
+        'reference' => 'a34c44203bb74d7d55a56a4aa0c034c5b6e02e8d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'muyomu/http' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5878e110005cf4da417700bb2feac0d86395719e',
+            'reference' => 'a34c44203bb74d7d55a56a4aa0c034c5b6e02e8d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
