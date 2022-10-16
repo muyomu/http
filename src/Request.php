@@ -56,4 +56,10 @@ class Request implements RequestClient
     {
         return $_SERVER['SERVER_PROTOCOL'];
     }
+
+    public function getURL(): string
+    {
+        $data = explode("?",$_SERVER['REQUEST_URI']);
+        return array_pop($data);
+    }
 }

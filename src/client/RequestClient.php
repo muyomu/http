@@ -12,7 +12,7 @@ interface RequestClient
 
     public function getProtocol():string;
 
-
+    public function getURL():string;
 
     public function getRemoteHost():string;
 
