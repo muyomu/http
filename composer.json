@@ -16,6 +16,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "muyomu/database": "1.0.3"
+        "muyomu/database": "1.1.0"
     }
 }

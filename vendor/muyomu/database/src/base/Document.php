@@ -4,7 +4,7 @@ namespace muyomu\database\base;
 
 class Document
 {
-    private string $dataType;
+    private int $dataType;
 
     private string $createTime;
 
@@ -15,13 +15,13 @@ class Document
     private mixed $data;
 
     /**
-     * @param string $dataType
+     * @param int $dataType
      * @param string $createTime
      * @param string $modifyTime
      * @param int $version
      * @param mixed $data
      */
-    public function __construct(string $dataType, string $createTime, string $modifyTime, int $version, mixed $data)
+    public function __construct(int $dataType, string $createTime, string $modifyTime, int $version, mixed $data)
     {
         $this->dataType = $dataType;
         $this->createTime = $createTime;
