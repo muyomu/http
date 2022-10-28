@@ -6,17 +6,18 @@ use muyomu\http\client\AttributeClient;
 
 class Attribute implements AttributeClient
 {
+    private array $database = array();
 
-    public function setAttribute(string $key, mixed $value,array $database): bool
+    public function setAttribute(string $key, mixed $value): bool
     {
-        $database[$key] = $value;
+        $this->database[$key] = $value;
         return true;
     }
 
-    public function getAttribute(string $key,array $database): mixed
+    public function getAttribute(string $key): mixed
     {
-        if (array_key_exists($key,$database)){
-            return $database[$key];
+        if (array_key_exists($key,$this->database)){
+            return $this->database[$key];
         }else{
             return null;
         }
