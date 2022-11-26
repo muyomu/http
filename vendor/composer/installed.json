@@ -125,8 +125,8 @@
         },
         {
             "name": "muyomu/router",
-            "version": "v2.0.2",
-            "version_normalized": "2.0.2.0",
+            "version": "v2.0.3",
+            "version_normalized": "2.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/muyomu/router.git",
@@ -163,7 +163,7 @@
             "description": "The router of muyomu framework",
             "support": {
                 "issues": "https://github.com/muyomu/router/issues",
-                "source": "https://github.com/muyomu/router/tree/v2.0.2"
+                "source": "https://github.com/muyomu/router/tree/v2.0.3"
             },
             "install-path": "../muyomu/router"
         }

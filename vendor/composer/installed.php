@@ -3,7 +3,7 @@
         'name' => 'muyomu/http',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7a794c008454da20ec25182f50f74af2affc45ba',
+        'reference' => '27385f10b1e4d7f1f09e8513687637e82ebcdf5a',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'muyomu/http' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7a794c008454da20ec25182f50f74af2affc45ba',
+            'reference' => '27385f10b1e4d7f1f09e8513687637e82ebcdf5a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -47,8 +47,8 @@
             'dev_requirement' => false,
         ),
         'muyomu/router' => array(
-            'pretty_version' => 'v2.0.2',
-            'version' => '2.0.2.0',
+            'pretty_version' => 'v2.0.3',
+            'version' => '2.0.3.0',
             'reference' => '3df91afef4aea4e58b08e79996b260c01412aeeb',
             'type' => 'library',
             'install_path' => __DIR__ . '/../muyomu/router',
